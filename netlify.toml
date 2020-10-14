@@ -1,0 +1,4 @@
+[context.production]
+  command = "yarn run ci"
+[context.deploy-preview]
+  command = "yarn run ci"

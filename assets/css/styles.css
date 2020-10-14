@@ -1,0 +1,9 @@
+html,
+body {
+  min-height: 100vh;
+  overflow: auto;
+}
+#__nuxt,
+#__layout {
+  min-height: 100vh;
+}
