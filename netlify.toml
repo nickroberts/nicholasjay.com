@@ -1,4 +1,6 @@
+[build]
+  publish = "dist/apps/app/exported"
 [context.production]
-  command = "yarn run ci"
+  command = "yarn run build"
 [context.deploy-preview]
-  command = "yarn run ci"
+  command = "yarn run build"

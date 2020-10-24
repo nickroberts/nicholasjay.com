@@ -1,4 +1,4 @@
 {
   "css.validate": false,
-  "stylelint.enable": true
+  "scss.validate": false
 }
