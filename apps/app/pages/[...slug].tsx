@@ -2,7 +2,7 @@ import renderToString from 'next-mdx-remote/render-to-string';
 import hydrate from 'next-mdx-remote/hydrate';
 import matter from 'gray-matter';
 import { readFileSync } from 'fs';
-import { join, relative } from 'path';
+import { basename, join, relative } from 'path';
 // import Link from 'next/link';
 import * as klawSync from 'klaw-sync';
 import tw, { styled } from 'twin.macro';
@@ -47,7 +47,10 @@ export default function BlogPost({ mdxSource, frontMatter }) {
 export async function getStaticPaths() {
   const contentRoot = join(root, 'apps/app/content');
   const paths = klawSync(contentRoot)
-    .filter((file) => file.stats.isFile())
+    .filter((file) => {
+      const name = basename(file.path);
+      return file.stats.isFile() && (name === '.' || name[0] !== '.');
+    })
     .map((file) => {
       return {
         params: {
