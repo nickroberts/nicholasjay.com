@@ -1,1 +1,1 @@
-![Nicholas Jay](dist/apps/app/exported/logo-vertical.svg)
+![Nicholas Jay](apps/app/public/logo-vertical.svg)
