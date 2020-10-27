@@ -1,12 +1,12 @@
+import { useEffect, useState } from 'react';
 import { AppProps } from 'next/app';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { Workbox } from 'workbox-window';
 
 import './styles.css';
 
 interface WorkboxWindow extends Window {
-  /* eslint-disable-next-line */
-  workbox: any;
+  workbox: Workbox;
 }
 declare let window: WorkboxWindow;
 
@@ -90,11 +90,7 @@ const CustomApp = ({ Component, pageProps, router }: AppProps) => {
   const onNotificationClose = () => {
     setShowNotification(false);
     setTimeout(() => {
-      if (
-        typeof window !== 'undefined' &&
-        'serviceWorker' in navigator &&
-        window.workbox !== undefined
-      ) {
+      if (typeof window !== 'undefined' && 'serviceWorker' in navigator && window.workbox !== undefined) {
         const wb = window.workbox;
         wb.addEventListener('controlling', (event) => {
           window.location.reload();
@@ -104,11 +100,7 @@ const CustomApp = ({ Component, pageProps, router }: AppProps) => {
     }, 100);
   };
   useEffect(() => {
-    if (
-      typeof window !== 'undefined' &&
-      'serviceWorker' in navigator &&
-      window.workbox !== undefined
-    ) {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator && window.workbox !== undefined) {
       const wb = window.workbox;
       const promptNewVersionAvailable = (event) => {
         setShowNotification(true);
@@ -122,10 +114,7 @@ const CustomApp = ({ Component, pageProps, router }: AppProps) => {
     <AnimatePresence exitBeforeEnter>
       <>
         <Component {...pageProps} key={router.route} />
-        <Notification
-          showNotification={showNotification}
-          onNotificationClose={onNotificationClose}
-        />
+        <Notification showNotification={showNotification} onNotificationClose={onNotificationClose} />
       </>
     </AnimatePresence>
   );

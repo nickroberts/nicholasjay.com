@@ -5,6 +5,7 @@ import matter from 'gray-matter';
 import * as klawSync from 'klaw-sync';
 import { motion } from 'framer-motion';
 import tw, { styled } from 'twin.macro';
+import Head from 'next/head';
 
 // import { LayoutDefault } from '@nicholasjay/ui-kit';
 
@@ -25,60 +26,32 @@ const Logo = styled(motion.div)`
 
 export default function IndexPage({ postData }) {
   return (
-    // <LayoutDefault>
-    <motion.div initial="exit" animate="enter" exit="exit">
-      <LogoWrapper>
-        <div>
-          <Logo
-            animate={{
-              scale: [1, 1.25, 1, 1.25, 1],
-              rotate: [0, -10, 0, 10, 0],
-              // x: [-20, 20, -20],
-              // y: [-20, 20, -20],
-            }}
-            transition={{
-              type: 'spring',
-              repeat: Infinity,
-              duration: 4,
-            }}
-          >
-            <img src="logo-mark.svg" alt="Nicholas Jay" />
-          </Logo>
-        </div>
-      </LogoWrapper>
-      {/* <ul>
-          {postData.map((data, idx) => (
-            <li key={idx}>
-              <Link href="/[slug]" as={`/${data.slug}`}>
-                {data.frontMatter.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <div className="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="w-2 bg-gray-800"></div>
-          <div className="flex items-center px-2 py-3">
-            <img
-              className="w-12 h-12 object-cover rounded-full"
-              alt="profile"
-              src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            />
-            <div className="mx-3">
-              <h2 className="text-xl font-semibold text-gray-800">
-                Hello john
-              </h2>
-              <p className="text-gray-600">
-                Sara was replied on the{' '}
-                <a href="#" className="text-blue-500">
-                  Upload Image
-                </a>
-                .
-              </p>
-            </div>
+    <>
+      <Head>
+        <title>Nicholas Jay</title>
+      </Head>
+      <motion.div initial="exit" animate="enter" exit="exit">
+        <LogoWrapper>
+          <div>
+            <Logo
+              animate={{
+                scale: [1, 1.25, 1, 1.25, 1],
+                rotate: [0, -10, 0, 10, 0],
+                // x: [-20, 20, -20],
+                // y: [-20, 20, -20],
+              }}
+              transition={{
+                type: 'spring',
+                repeat: Infinity,
+                duration: 4,
+              }}
+            >
+              <img src="logo-mark.svg" alt="Nicholas Jay" />
+            </Logo>
           </div>
-        </div> */}
-    </motion.div>
-    // </LayoutDefault>
+        </LogoWrapper>
+      </motion.div>
+    </>
   );
 }
 

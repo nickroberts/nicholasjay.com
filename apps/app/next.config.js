@@ -16,7 +16,7 @@ const production = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
   webpack: (config, { isServer, defaultLoaders }) => {
-    defaultLoaders.babel.options.plugins = [require('babel-plugin-macros')];
+    defaultLoaders.babel.options.plugins = [require('babel-plugin-macros'), require('babel-plugin-styled-components')];
     if (!isServer) {
       config.node = {
         fs: 'empty',
