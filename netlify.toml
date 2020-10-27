@@ -1,6 +1,5 @@
 [build]
   publish = "dist/apps/app/exported"
+  command = "yarn run export:prod"
 [context.production]
-  command = "yarn run build:prod"
-[context.deploy-preview]
-  command = "yarn run build:preview"
+  environment = { NODE_ENV = "production" }
