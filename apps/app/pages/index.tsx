@@ -46,7 +46,7 @@ export default function IndexPage({ postData }) {
                 duration: 4,
               }}
             >
-              <img src="logo-vertical.svg" alt="Nicholas Jay" />
+              <img src="logo-mark.svg" alt="Nicholas Jay" />
             </Logo>
           </div>
         </LogoWrapper>
