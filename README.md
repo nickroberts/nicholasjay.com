@@ -1,1 +1,1 @@
-![Nicholas Jay](apps/app/public/logo-vertical.svg)
+![Nicholas Jay](apps/app/public/logo-mark.svg)
