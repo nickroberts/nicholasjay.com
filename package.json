@@ -5,7 +5,9 @@
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
+    "build": "nx build",
     "export": "nx export",
+    "build:prod": "nx build ---skip-nx-cache",
     "export:prod": "nx export ---skip-nx-cache",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
