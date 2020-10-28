@@ -15,7 +15,6 @@ runtimeCaching[0].urlPattern = '/';
 const production = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-  target: 'experimental-serverless-trace',
   webpack: (config, { isServer, defaultLoaders }) => {
     defaultLoaders.babel.options.plugins = [require('babel-plugin-macros'), require('babel-plugin-styled-components')];
     if (!isServer) {
