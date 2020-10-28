@@ -37,8 +37,8 @@ export default function IndexPage({ postData }) {
               animate={{
                 scale: [1, 1.25, 1, 1.25, 1],
                 rotate: [0, -10, 0, 10, 0],
-                x: [-20, 20, -20],
-                y: [-20, 20, -20],
+                // x: [-20, 20, -20],
+                // y: [-20, 20, -20],
               }}
               transition={{
                 type: 'spring',
