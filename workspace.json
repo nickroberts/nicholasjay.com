@@ -15,7 +15,10 @@
           },
           "configurations": {
             "production": {}
-          }
+          },
+          "outputs": [
+            "{options.outputPath}"
+          ]
         },
         "serve": {
           "builder": "@nrwl/next:server",
@@ -39,7 +42,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/app/**/*.{ts,tsx}"]
+            "lintFilePatterns": [
+              "apps/app/**/*.{ts,tsx}"
+            ]
           }
         },
         "test": {
@@ -47,7 +52,10 @@
           "options": {
             "jestConfig": "apps/app/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/apps/app"
+          ]
         }
       }
     },
@@ -72,7 +80,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/app-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/app-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -86,7 +96,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/ui-kit/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "libs/ui-kit/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
@@ -94,7 +106,10 @@
           "options": {
             "jestConfig": "libs/ui-kit/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-kit"
+          ]
         }
       }
     }

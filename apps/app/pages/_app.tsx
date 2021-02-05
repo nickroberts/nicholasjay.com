@@ -106,7 +106,7 @@ const CustomApp = ({ Component, pageProps, router }: AppProps) => {
         setShowNotification(true);
       };
       wb.addEventListener('waiting', promptNewVersionAvailable);
-      wb.addEventListener('externalwaiting', promptNewVersionAvailable);
+      // wb.addEventListener('externalwaiting', promptNewVersionAvailable);
       wb.register();
     }
   }, []);
