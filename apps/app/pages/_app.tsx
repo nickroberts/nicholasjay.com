@@ -41,16 +41,16 @@ const Notification = ({ showNotification, onNotificationClose }) => {
           variants={variants}
           className="fixed inset-0 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-end sm:justify-end"
         >
-          <div className="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto">
+          <div className="max-w-sm w-full bg-gray-600 shadow-lg rounded-lg pointer-events-auto">
             <div className="rounded-lg shadow-xs overflow-hidden">
               <div className="p-4">
                 <div className="flex items-center">
                   <div className="w-0 flex-1 flex justify-between">
-                    <p className="w-0 flex-1 text-sm leading-5 font-medium text-gray-900">
+                    <p className="w-0 flex-1 text-sm leading-5 font-medium text-white">
                       A newer version of this web app is available.
                     </p>
                     <button
-                      className="ml-3 flex-shrink-0 text-sm leading-5 font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150"
+                      className="ml-3 flex-shrink-0 text-sm leading-5 font-medium text-white hover:text-primary focus:outline-none focus:underline transition ease-in-out duration-150"
                       onClick={handleClose}
                     >
                       Reload
@@ -58,7 +58,7 @@ const Notification = ({ showNotification, onNotificationClose }) => {
                   </div>
                   <div className="ml-4 flex-shrink-0 flex">
                     <button
-                      className="inline-flex text-gray-400 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150"
+                      className="inline-flex text-white hover:text-primary focus:outline-none focus:text-primary transition ease-in-out duration-150"
                       onClick={handleClose}
                     >
                       <svg

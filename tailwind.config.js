@@ -40,6 +40,10 @@ module.exports = {
   },
   theme: {
     extend: {
+      colors: {
+        primary: '#f84aa7',
+        secondary: '#00bff3',
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
