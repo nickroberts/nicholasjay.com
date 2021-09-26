@@ -1,5 +1,5 @@
 [build]
   publish = "dist/apps/app/exported"
-  command = "yarn export:prod"
+  command = "npx nx export:prod"
 [context.production]
   environment = { NODE_ENV = "production" }
