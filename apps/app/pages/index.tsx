@@ -9,8 +9,6 @@ import tw, { styled } from 'twin.macro';
 
 import NjLogo from '../components/nj-logo';
 
-// import { LayoutDefault } from '@nicholasjay/ui-kit';
-
 const root = process.cwd();
 
 const ResumeLinkWrapper = styled.div`
