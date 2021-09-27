@@ -1,7 +1,0 @@
-# Add files here to ignore them from prettier formatting
-
-/dist
-/coverage
-
-/apps/app/public/sw*.js
-/apps/app/public/workbox*.js
