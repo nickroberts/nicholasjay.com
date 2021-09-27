@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
           <div className="text-center">
             <div className="flex-shrink-0 flex justify-center">
               <span className="sr-only">Nicholas Jay</span>
-              <img
+              <Image
                 className="h-12 w-auto"
                 src="/logo-mark.svg"
                 alt="Nicholas Jay"
